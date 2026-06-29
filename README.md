@@ -131,11 +131,11 @@ cd Neuroland/.config
 mv * /.config
 
 mkdir -p ~/Изображения/wallpaper
-cd ~/Neuroland/assets/wallpaper
+cd ~/Neuroland/.config/assets/wallpaper
 mv * ~/Изображения/wallpaper
 
 mkdir -p ~/Видео/live_wallpaper
-cd ~/Neuroland/assets/live_wallpaper
+cd ~/Neuroland/.config/assets/live_wallpaper
 mv * ~/Видео/live_wallpaper
 ```
 ###### restart hyprland session (Super + M)
