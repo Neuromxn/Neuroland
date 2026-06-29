@@ -6,6 +6,7 @@ Hyprland Ubuntu 26.04 rice dots
 sudo apt install hyprland
 ```
 ### 2.Install dependencies
+##### Wayland envifoments
 ```bash
 sudo apt install waybar rofi dunst swaylock swayidle kitty pavucontrol
 ```
@@ -82,6 +83,41 @@ meson setup build --prefix=/usr/local
 ninja -C build
 sudo ninja -C build install
 ```
+##### Install polkit authentification agent
+##### Hyprpolkitagent
+```bash
+sudo apt install hyprpolkitagent
+systemctl --user start hyprpolkitagent
+```
+##### or
+##### KDE polkit authentification agent
+```bash
+sudo apt install polkit-kde-agent-1
+exec-once = /usr/lib/polkit-kde-authentication-agent-1
+```
 
-
+### 3.Install other components (optional)
+##### Thunar filebrowser
+```bash
+sudo apt install thunar
+```
+##### Vivaldi browser
+```bash
+wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/vivaldi-archive-keyring.gpg
+```
+```bash
+echo "deb [signed-by=/usr/share/keyrings/vivaldi-archive-keyring.gpg] https://repo.vivaldi.com/archive/deb/ stable main" | sudo tee /etc/apt/sources.list.d/vivaldi.list
+```
+```bash
+sudo apt update
+sudo apt install vivaldi-stable
+```
+##### cmatrix (matrix effect on terminal)
+```bash
+sudo apt install cmatrix
+```
+##### neofetch/fastfetch for system info
+```bash
+sudo apt install neofetch # or fastfetch
+```
 
