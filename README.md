@@ -123,5 +123,9 @@ sudo apt install neofetch # or fastfetch
 ### 4.Copy config files
 ##### Clone the repository
 ```bash
-git clone 
+git clone https://github.com/Neuromxn/Neuroland.git
+```
+```bash
+cd Neuroland/.config
+mv * /.config
 ```
