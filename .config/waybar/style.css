@@ -1,0 +1,88 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 15px;
+    color: #cdd6f4;
+}
+ 
+window#waybar {
+    background: rgba(21, 21, 32, 0.489);
+    border-radius: 15px;
+}
+
+/* Общий стиль для правых модулей */
+#pulseaudio, #clock, #cpu, #memory, #custom-shutdown {
+    background: rgba(30, 30, 46, 0.7);
+    padding: 4px 16px;
+    border-radius: 10px;
+    margin: 5px 5px;
+}
+
+/* Центральный блок рабочих столов */
+#workspaces {
+    background: rgba(30, 30, 46, 0.7);
+    border-radius: 10px;
+    padding: 4px 10px;
+    margin: 5px 0;
+}
+
+#workspaces button {
+    padding: 4px 8px;
+    margin: 0 3px;
+    border-radius: 6px;
+    background: transparent;
+    color: #6c7086;
+    transition: all 0.2s;
+}
+
+#workspaces:hover {
+    background: rgba(30, 30, 46, 0.85);
+    transition: all 0.3s ease-in-out;
+}
+
+
+#pulseaudio:hover, #clock:hover, #cpu:hover, #memory:hover, #custom-shutdown:hover {
+    background: rgba(30, 30, 46, 0.85);
+    transition: all 0.3s ease-in-out;
+}
+
+#custom-configname {
+    background: rgba(21, 21, 32, 0.75);
+    color: #cba6f7;
+    padding: 0px 0px;
+    border-radius: 10px;
+    margin: 0px 0px;
+
+    font-weight: bold;
+    font-size: 22px;
+    
+    color: #fff;
+ 
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #f0f,
+        0 0 82px #f0f,
+        0 0 92px #f0f,
+        0 0 102px #f0f,
+        0 0 151px #f0f;
+    animation: flicker 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes flicker {
+    0% {
+        opacity: 0.5;
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+                    0 0 42px #f0f, 0 0 82px #f0f, 0 0 92px #f0f,
+                    0 0 102px #f0f, 0 0 151px #f0f;
+    }
+    100% {
+        opacity: 1;
+        text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+                    0 0 42px #f0f, 0 0 82px #f0f, 0 0 92px #f0f,
+                    0 0 102px #f0f, 0 0 151px #f0f,
+                    0 0 200px #f0f; /* дополнительное свечение на пике */
+    }
+        
+}
