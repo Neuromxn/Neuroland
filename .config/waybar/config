@@ -1,0 +1,58 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "spacing": 4,
+    "margin": "0 15 0 15",
+  
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["custom/configname"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "clock", "custom/shutdown"],
+    
+    "cpu": {
+        "interval": 2,
+        "format": " {usage}%"
+    },
+    
+    "memory":{
+        "interval": 2,
+        "format": " {percentage}%"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-click-middle": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 50%",
+        "scroll-step": 5,
+        "tooltip": false
+    },
+    
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a, %d %b}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click-right": "mode"
+    },
+
+    "custom/shutdown": {
+    "format": "⏻",
+    "on-click": "systemctl poweroff",
+    "tooltip": "Shutdown"
+    },
+
+    "custom/configname": {
+        "format": "   ☯ NeuroLand ☯   ",
+        "tooltip": "Текущий конфиг: Hyprbuntu"
+    },
+
+    "hyprland/window": {
+        "icon": false,
+        "format": "{class}"
+    }
+}
