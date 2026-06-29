@@ -1,0 +1,43 @@
+* {
+    // Определяем переменные для цветов один раз
+    background-color: #1E1E2E;
+    background-color-alt: #181825;
+    text-color: #CDD6F4;
+    accent-color: #dc89fa;
+}
+
+// Стилизация главного окна
+window {
+    location: center; // расположение по центру
+    width: 50%;       // ширина 50% экрана
+    border-radius: 20px;
+    background-color: @background-color;
+    padding: 15px;
+}
+
+// Стилизация строки поиска
+inputbar {
+    children: [prompt, entry]; // показываем промпт ("drun:") и поле ввода
+    background-color: @background-color-alt;
+    border-radius: 10px;
+    padding: 10px;
+    spacing: 5px;
+}
+
+// Стилизация текста промпта
+prompt {
+    text-color: @accent-color;
+}
+
+// Стилизация отдельной строки (элемента)
+element {
+    padding: 8px;
+    border-radius: 8px;
+    spacing: 10px; // Расстояние между иконкой и текстом
+}
+
+// Стилизация выделенного элемента
+element selected {
+    background-color: @accent-color;
+    text-color: @background-color;
+}
