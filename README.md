@@ -120,4 +120,8 @@ sudo apt install cmatrix
 ```bash
 sudo apt install neofetch # or fastfetch
 ```
-
+### 4.Copy config files
+##### Clone the repository
+```bash
+git clone 
+```
