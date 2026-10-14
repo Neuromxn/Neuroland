@@ -48,16 +48,15 @@ window#waybar {
 
 #custom-configname {
     background: rgba(21, 21, 32, 0.75);
-    color: #cba6f7;
     padding: 0px 0px;
     border-radius: 10px;
     margin: 0px 0px;
 
     font-weight: bold;
     font-size: 22px;
-    
+
+    /* Неоновый белый текст с фиолетовым свечением */
     color: #fff;
- 
     text-shadow:
         0 0 7px #fff,
         0 0 10px #fff,
@@ -68,9 +67,9 @@ window#waybar {
         0 0 102px #f0f,
         0 0 151px #f0f;
     animation: flicker 1.5s ease-in-out infinite alternate;
-    }
+}
 
-    @keyframes flicker {
+@keyframes flicker {
     0% {
         opacity: 0.5;
         text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
@@ -84,5 +83,4 @@ window#waybar {
                     0 0 102px #f0f, 0 0 151px #f0f,
                     0 0 200px #f0f; /* дополнительное свечение на пике */
     }
-        
 }
