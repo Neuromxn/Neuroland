@@ -24,7 +24,7 @@
 | Файл | Исправление |
 |---|---|
 | `hyprland.conf` (до удаления) | убрана лишняя `&` у `swww-daemon`; `sleep && waypaper --restore` обёрнут в `sh -c`; `export`-строка заменена на `env =`; устранён конфликт `QT_QPA_PLATFORMTHEME qt5ct/qt6ct` |
-| `.config/rofi/config.rasi` | тема с жёсткого пути `/home/neuroman/...` → переносимый `~/.config/rofi/themes/spotlight-dark.rasi`; удалён мусор из ~20 закомментированных экспериментов |
+| `.config/rofi/config.rasi` | активная тема назначена явно: `@ ~/.config/rofi/themes/spotlight-dark.rasi` (в main не было ни одной активной темы — только закомментированные эксперименты с чужими путями `/home/neuroman/...`) → конфиг переносим; удалён мусор из ~20 закомментированных строк |
 | `.config/waybar/style.css` | починен сломанный CSS: незакрытый `@keyframes flicker`, лишняя скобка, дубль `color` |
 | `.config/rofi/powermenu.rasi` | файл был пустым (0 байт), хотя на него ссылается `powermenu.sh` — создана тема в стиле риса (Catppuccin Mocha) |
 | `.config/rofi/powermenu.sh` | выставлен флаг исполнения `+x` |
@@ -40,7 +40,7 @@
 ## Статистика
 
 ```
-7 files changed, 389 insertions(+), 431 deletions(-)
+9 files changed, 462 insertions(+), 431 deletions(-)
 delete mode .config/hypr/hyprland.conf
 create mode .config/hypr/hyprland.lua
 ```
